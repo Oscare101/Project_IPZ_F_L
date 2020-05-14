@@ -1,0 +1,71 @@
+#canvas
+{
+    border: 1px solid black;
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+}
+#colors button
+{
+    width: 40px;
+	height: 40px;
+	border-radius: 15%;
+	margin-top: 0px;
+	
+}
+#black 
+{
+    background: black;
+}
+#purple 
+{
+    background: purple;
+}
+#red
+{
+    background: red;
+}
+#green 
+{ 
+    background: green;
+}
+#blue 
+{
+    background: blue;
+}
+#orange 
+{
+    background: orange;
+}
+#white 
+{
+    background: white;
+}
+#aqua 	
+{
+    background: aqua;
+}
+#grey 
+{
+    background: grey;
+}
+#yellow 
+{
+    background: yellow;
+}
+#test {
+    height: 20px;
+    width:20px;
+    background: green;
+	border-radius: 100%;
+	right: 100px;
+}
+input[type="text"]{
+    width: 40px;
+    margin-left: 50px;
+}
+
+
+
+
+
+

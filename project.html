@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<title>Document</title>
+		<script type="text/javascript" src="script.js">
+			
+		</script>
+	</head>
+    <body>
+	    <div id='colors'>
+			<h1>Это холст для рисования</h1>
+	        <button id='black' onclick='changeColor("black")' ontouchstart='changeColor("black")'></button>
+			<button id='grey' onclick='changeColor("grey")' ontouchstart='changeColor("grey")'></button>
+		    <button id='white' onclick='changeColor("white")' ontouchstart='changeColor("white")'></button>
+		    <button id='red' onclick='changeColor("red")' ontouchstart='changeColor("red")'></button>
+			<button id='orange' onclick='changeColor("orange")' ontouchstart='changeColor("orange")'></button>
+			<button id='yellow' onclick='changeColor("yellow")' ontouchstart='changeColor("yellow")'></button>
+		    <button id='green' onclick='changeColor("green")' ontouchstart='changeColor("green")'></button>
+			<button id='aqua' onclick='changeColor("aqua")' ontouchstart='changeColor("aqua")'></button>
+		    <button id='blue' onclick='changeColor("blue")' ontouchstart='changeColor("blue")'></button>
+		    <button id='purple' onclick='changeColor("purple")' ontouchstart='changeColor("purple")'></button>
+		    <input type="range" id="r1" oninput="fun1()">
+			<input type="text" id="i1">
+	    </div>
+	    <canvas id='canvas' width='600' height='600'></canvas>
+	    <div>
+	        <button onclick='clearCanvas()'>Очистить</button>
+	    </div>
+    </body>
+</html>
