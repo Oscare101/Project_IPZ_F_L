@@ -1,11 +1,17 @@
 var arr_touches = [];
 var canvas;
 var ctx;
-var down = false; 
-var color = 'black'; 
-let width = 5; 
+var down = false; //mouse is pressed
+var color = 'black'; //default drawing color
+let width = 5; // drawing width
 
+
+//calling window.onload to make sure the HTML is loaded
 window.onload = function() {
+    canvas = document.getElementById('canvas');
+    ctx = canvas.getContext('2d'); 
+    ctx.lineWidth = width;
+    
     //handling mouse click and move events
     canvas.addEventListener('mousemove', handleMove); 
     canvas.addEventListener('mousedown', handleDown);
@@ -18,7 +24,6 @@ window.onload = function() {
     canvas.addEventListener("touchleave", handleEnd, false);
     canvas.addEventListener("touchmove", handleTouchMove, false);
 };
-
 function fun1() {
 	var rng=document.getElementById('r1'); //rng - это ползунок
 	var i1=document.getElementById('i1'); // i1 - input
@@ -31,7 +36,7 @@ function handleMove(e)
 	yPos = e.clientY-canvas.offsetTop;
 	if(down == true)
 	{
-		ctx.lineTo(xPos,yPos); 
+		ctx.lineTo(xPos,yPos); //create a line from old point to new one
 		ctx.strokeStyle = color;
 		ctx.stroke();
 	}
