@@ -1,3 +1,10 @@
+
+body {
+	background: url("imagebg1.jpg") center;
+	background-size: cover;
+}
+
+
 #canvas
 {
     border: 1px solid black;
@@ -57,7 +64,18 @@ input[type="number"]{
     width: 40px;
     margin-left: 50px;
 }
-
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	width: 100%;       /*на 100% ширины*/
+	height: 100vh;     /*на всю высоту экрана пользователя*/
+	
+	background:              
+	url("imagebg1.jpg") center;  /*фоновая картинка*/
+	background-size: cover;
+}
 
 
 
