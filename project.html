@@ -3,14 +3,16 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
-		<title>Document</title>
+		<title>draw</title>
 		<script type="text/javascript" src="script.js">
 			
 		</script>
+		
 	</head>
     <body>
+	
 	    <div id='colors'>
-			<h1>Это холст для рисования</h1>
+			<h1></h1>
 	        <button id='black' onclick='changeColor("black")' ontouchstart='changeColor("black")'></button>
 			<button id='grey' onclick='changeColor("grey")' ontouchstart='changeColor("grey")'></button>
 		    <button id='white' onclick='changeColor("white")' ontouchstart='changeColor("white")'></button>
@@ -27,6 +29,7 @@
 	    <canvas id='canvas' width='600' height='600'></canvas>
 	    <div>
 	        <button onclick='clearCanvas()'>Очистить</button>
+			<button onclick='clearCanvas()'><a class="nav__link" href="project_first.html">на главную</a></button>	
 	    </div>
     </body>
 </html>
