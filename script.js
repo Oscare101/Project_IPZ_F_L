@@ -1,42 +1,64 @@
+/**
+ * @author Fedortsev & Lytvynenko
+ *
+ * down - false when mouse is pressed
+ * @type {string} - color
+ * @type {int} - width
+ */
 var arr_touches = [];
 var canvas;
 var ctx;
-var down = false; //mouse is pressed
-var color = 'black'; //default drawing color
-let width = 5; // drawing width
+var down = false; 
+var color = 'black';
+let width = 5; 
 
-
-//calling window.onload to make sure the HTML is loaded
+/**
+ * Calling window.onload to make sure the HTML is loaded
+ *
+ */
 window.onload = function() {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d'); 
     ctx.lineWidth = width;
-    
-    //handling mouse click and move events
+    /**
+	* Handling mouse click and move events
+	*
+	*/
     canvas.addEventListener('mousemove', handleMove); 
     canvas.addEventListener('mousedown', handleDown);
     canvas.addEventListener('mouseup', handleUp);
-    
-    //handling mobile touch events
+    /**
+	* Handling mobile touch events
+	*
+	*/
     canvas.addEventListener("touchstart", handleStart, false);
     canvas.addEventListener("touchend", handleEnd, false);
     canvas.addEventListener("touchcancel", handleCancel, false);
     canvas.addEventListener("touchleave", handleEnd, false);
     canvas.addEventListener("touchmove", handleTouchMove, false);
 };
+/**
+* rng - ползунок
+* i1 - input
+*/
 function fun1() {
-	var rng=document.getElementById('r1'); //rng - это ползунок
-	var i1=document.getElementById('i1'); // i1 - input
+	var rng=document.getElementById('r1'); 
+	var i1=document.getElementById('i1');
 	i1.value=rng.value;
 	var width = Number(i1.value);
 }
+/**
+* Line to - line from old point to new one
+* 
+*/
+
 function handleMove(e)
 {
 	xPos = e.clientX-canvas.offsetLeft;
 	yPos = e.clientY-canvas.offsetTop;
 	if(down == true)
 	{
-		ctx.lineTo(xPos,yPos); //create a line from old point to new one
+		ctx.lineTo(xPos,yPos);
 		ctx.strokeStyle = color;
 		ctx.stroke();
 	}
@@ -66,6 +88,10 @@ function handleStart(evt)
         }
     }
 }
+/**
+* Function that defines movement of brush (cursor)
+* 
+*/
 function handleTouchMove(evt) 
 {
     var touches = evt.changedTouches;
@@ -134,10 +160,18 @@ function ongoingTouchIndexById(idToFind)
     }
     return -1;
 }
+/**
+* @type {string} - changing color of brush
+* 
+*/
 function changeColor(new_color) 
 {
     color = new_color;
 }
+/**
+* Button that clears canvas
+* 
+*/
 function clearCanvas() 
 {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
