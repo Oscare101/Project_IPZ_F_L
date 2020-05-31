@@ -1,0 +1,170 @@
+body {
+	margin: 0;
+	/*background: #E0FFFF	;*/
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	line-height: 1.6;       /*шрифт*/
+	color: #333;
+	
+}
+*,
+*: before,
+*: after {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;            /*без отступов при использовании заголовков*/
+}
+
+/* Container */
+.container {
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Intro */
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	width: 100%;       /*на 100% ширины*/
+	height: 100vh;     /*на всю высоту экрана пользователя*/
+	
+	background:              
+	url("imagebg2.jpg") center;  /*фоновая картинка*/
+	background-size: cover;
+}
+
+.intro__inner {
+	width: 100%;     /*параметры встречного текста*/
+	color: #fff;
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.intro__title {
+	font-size: 50px;
+	font-weight: 1200;
+	text-transform: uppercase;   /*верхний регистр*/
+	text-align: center;
+	line-height: 1;
+}
+
+.intro__title:after {
+	content: "";
+	display: block;
+	width: 200px;
+	height: 4px;
+	margin: 60px auto;   /*60 - отступ от верха и низа*/
+	background-color: #fff;
+	
+}
+
+.intro__suptitle {
+	margin-bottom: 15px;     /*отступ между строками*/
+	font-family: 'Kaushan Script';
+	font-size: 32px;
+	color: #fff;
+	text-align: center;
+}
+
+/* Header */
+
+.header{                /*шапка*/
+	padding-top: 30px;   /*отступ о верха*/
+	width: 100%;
+	position: absolute;    
+	top: 0;
+	left: 0;
+	right:0 ;
+	z-index: 1000;
+}
+
+.header__inner{
+	display: flex;           /*лого и меню займут крайне места*/
+	justify-content: space-between;
+	align-items: center;
+	max-width: 100%;
+}
+
+.header__logo {
+	font-size: 30px;     /*стиль логотипа*/
+	font-weight: 1200;   /*толшина букв лого*/
+	color: #fff; 
+}
+
+/* nav */
+
+.nav {
+	font-size: 14px;    /*размер кнопок меню*/
+	text-transform: uppercase;     /*верхний регистр*/
+}
+
+.nav__link {
+	display: inline-block;     /*ориентация кнопок меню*/
+	vertical-align: top;
+	margin: 0 10px;     /*растояние между кнопками меню*/
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.2s linear;   /*время засвета на кнопке меню при наводке*/
+}
+
+.nav__link:after {    /*полоска под кнопкой меню*/
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	opacity: 0;    /*неактивна до наведения*/
+	background-color: #fce38a;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+	transition: opacity 0.2s linear;  /*планое подчеркивание кнопки меню*/ 
+}
+
+.nav__link:hover {
+	color: #fce38a;     /*цвет при наводке*/
+}
+
+.nav__link:hover:after {
+	opacity: 1;
+}
+
+/* Button */
+
+.btn {
+	display: inline-block;
+	wertical-align: top;
+	border: 2px solid #fff;    /*2 пкс сплошной белый*/
+	padding: 7px 30px;
+	color: #fff;
+	text-transform: uppercase;     /*верхний регистр*/
+	font-size: 14px;
+	font-weight: 900;
+	text-decoration: none;    /*убрали подчеркивание ссылки*/
+	transition: background 0.1s linear, color 0.1s linear;
+}
+
+.btn:hover {
+	background-color: #fff;
+	color: #333;                /*при наведении на кнопку*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
