@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="enter.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="enter.js">
+			
+		</script>
+	</head>
+	<body>
+
+		<form action="/action_page.php">
+			<div class="container">
+			  <label for="uname"><b>Username</b></label>
+			  <input type="text" placeholder="Enter Username" name="uname" required>
+
+			  <label for="psw"><b>Password</b></label>
+			  <input type="password" placeholder="Enter Password" name="psw" required>
+				
+			  <button onclick="location.href = 'project.html'" type="submit">Войти</button>
+			  <label>
+				<input type="checkbox" checked="checked" name="remember"> Remember me
+			  </label>
+			</div>
+
+			<div class="container" style="background-color:#f1f1f1">
+			  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+			  <span class="psw">Забіли <a href="#">пароль?</a></span>
+			</div>
+		  </form>
+	</body>
+</html>
